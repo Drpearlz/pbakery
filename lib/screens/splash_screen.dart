@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pbakery/constants.dart';
+import 'package:pbakery/constants/constants.dart';
 import 'package:pbakery/home_page.dart';
 
 class SplashScreen extends StatefulWidget {
