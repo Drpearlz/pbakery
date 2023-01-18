@@ -4,13 +4,13 @@ class TextFieldFormat extends StatelessWidget {
   const TextFieldFormat({
     super.key,
     this.icon,
-    this.color,
+    this.suffixColor,
     this.text,
     this.obscureText = false,
   });
 
   final IconData? icon;
-  final Color? color;
+  final Color? suffixColor;
   final String? text;
   final bool obscureText;
 
@@ -27,11 +27,10 @@ class TextFieldFormat extends StatelessWidget {
           obscureText: obscureText,
           decoration: InputDecoration(
               focusedBorder: const UnderlineInputBorder(
-                  borderSide:
-                      BorderSide(color: Color.fromARGB(137, 250, 140, 140))),
+                  borderSide: BorderSide(color: Colors.black54)),
               suffixIcon: Icon(
                 icon,
-                color: color,
+                color: suffixColor,
               )),
         ),
       ],

@@ -47,16 +47,17 @@ class _SignupPageState extends State<SignupPage> {
                 const TextFieldFormat(
                   text: 'Username',
                   icon: Icons.check,
-                  color: Colors.green,
+                  suffixColor: Colors.green,
                 ),
                 const SizedBox(height: 20),
                 const TextFieldFormat(
                   text: 'Enter Address',
                   icon: Icons.check,
-                  color: Colors.green,
+                  suffixColor: Colors.green,
                 ),
                 const SizedBox(height: 30),
                 const TextFieldFormat(
+                  suffixColor: Colors.black54,
                   text: 'Password',
                   icon: Icons.remove_red_eye_outlined,
                   obscureText: true,
