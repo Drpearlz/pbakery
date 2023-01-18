@@ -16,12 +16,12 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    // Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Background(
         child: Padding(
-          padding: const EdgeInsets.only(top: 80, left: 20, right: 20),
+          padding: EdgeInsets.only(top: size.height * 0.1, left: 20, right: 20),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,

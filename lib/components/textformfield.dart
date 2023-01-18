@@ -20,15 +20,19 @@ class TextFieldFormat extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('$text',
-            style:
-                TextStyle(fontWeight: FontWeight.w800, color: Colors.black45)),
+            style: const TextStyle(
+                fontWeight: FontWeight.w800, color: Colors.black45)),
         TextFormField(
+          cursorColor: Colors.black54,
           obscureText: obscureText,
           decoration: InputDecoration(
+              focusedBorder: const UnderlineInputBorder(
+                  borderSide:
+                      BorderSide(color: Color.fromARGB(137, 250, 140, 140))),
               suffixIcon: Icon(
-            icon,
-            color: color,
-          )),
+                icon,
+                color: color,
+              )),
         ),
       ],
     );
