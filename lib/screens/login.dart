@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pbakery/constants/constant.dart';
-
 import '../components/background.dart';
 import '../components/roundedbutton.dart';
 import '../components/textformfield.dart';
@@ -14,6 +13,13 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool showText = true;
+  void revealText() {
+    setState(() {
+      showText = !showText;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -50,11 +56,12 @@ class _LoginPageState extends State<LoginPage> {
                   suffixColor: Colors.green,
                 ),
                 const SizedBox(height: 30),
-                const TextFieldFormat(
+                TextFieldFormat(
+                  onPressedIcon: revealText,
                   suffixColor: Colors.black54,
                   text: 'Password',
                   icon: Icons.remove_red_eye_outlined,
-                  obscureText: true,
+                  obscureText: showText,
                 ),
                 const SizedBox(height: 30),
                 const Align(
