@@ -59,7 +59,7 @@ class _SignupPageState extends State<SignupPage> {
                 const TextFieldFormat(
                   text: 'Enter Address',
                   icon: Icons.check,
-                  suffixColor: Colors.green,
+                  suffixColor: kPrimaryColor,
                 ),
                 const SizedBox(height: 30),
                 TextFieldFormat(

@@ -53,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                 const TextFieldFormat(
                   text: 'Enter Address',
                   icon: Icons.check,
-                  suffixColor: Colors.green,
+                  suffixColor: kPrimaryColor,
                 ),
                 const SizedBox(height: 30),
                 TextFieldFormat(
