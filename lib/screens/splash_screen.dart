@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pbakery/constants/constants.dart';
 import 'package:pbakery/screens/home_page.dart';
+import 'package:pbakery/screens/login.dart';
 import 'package:pbakery/screens/profile.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (BuildContext context) {
-          return ProfileScreen();
+          return const LoginPage();
         }),
       );
     });

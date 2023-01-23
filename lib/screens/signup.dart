@@ -33,7 +33,7 @@ class _SignupPageState extends State<SignupPage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Image.asset(
-                  'images/foodlogo.png',
+                  'assets/images/foodlogo.png',
                 ),
                 const SizedBox(height: 80),
                 const Align(
