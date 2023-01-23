@@ -33,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Image.asset(
-                  'images/foodlogo.png',
+                  'assets/images/foodlogo.png',
                 ),
                 const SizedBox(height: 80),
                 const Align(
@@ -60,7 +60,9 @@ class _LoginPageState extends State<LoginPage> {
                   onPressedIcon: revealText,
                   suffixColor: Colors.black54,
                   text: 'Password',
-                  icon: Icons.remove_red_eye_outlined,
+                  icon: showText == true
+                      ? Icons.remove_red_eye_outlined
+                      : Icons.visibility_off_outlined,
                   obscureText: showText,
                 ),
                 const SizedBox(height: 30),
