@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: GoogleFonts.sourceSansPro().fontFamily),
       debugShowCheckedModeBanner: false,
       title: 'Pearlz Bakery',
-      // home: const SplashScreen(),
-      home: const OnboardingScreen(),
+      home: const SplashScreen(),
+      // home: OnboardingScreen(),
       // home: const LoginPage(),
     );
   }

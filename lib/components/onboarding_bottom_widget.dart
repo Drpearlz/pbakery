@@ -7,10 +7,16 @@ class OnboardingBottomWidget extends StatelessWidget {
   const OnboardingBottomWidget({
     Key? key,
     required PageController controller,
+    this.onTap,
+    required this.text,
+    required this.width,
   })  : _controller = controller,
         super(key: key);
 
   final PageController _controller;
+  final Function()? onTap;
+  final String text;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +25,9 @@ class OnboardingBottomWidget extends StatelessWidget {
       left: 20,
       bottom: 50,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.only(right: 50),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SmoothPageIndicator(
                 effect: const WormEffect(
@@ -33,9 +39,9 @@ class OnboardingBottomWidget extends StatelessWidget {
                 ),
                 controller: _controller,
                 count: 3),
-            SizedBox(width: size.width * 0.4),
+            SizedBox(width: width),
             GestureDetector(
-              onTap: null,
+              onTap: onTap,
               child: Material(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -43,13 +49,14 @@ class OnboardingBottomWidget extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
                   child: Row(
-                    children: const [
+                    children: [
                       Text(
-                        'Next',
-                        style: TextStyle(color: kPrimaryColor, fontSize: 16),
+                        text,
+                        style:
+                            const TextStyle(color: kPrimaryColor, fontSize: 16),
                       ),
                       SizedBox(width: 15),
-                      Icon(
+                      const Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: kPrimaryColor,
                       )

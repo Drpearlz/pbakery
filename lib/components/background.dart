@@ -20,21 +20,3 @@ class Background extends StatelessWidget {
     );
   }
 }
-
-// Stack(
-//         children: [
-//           const Positioned(
-//             top: 0,
-//             child: Image(
-//               image: AssetImage('images/Rectangle17.png'),
-//             ),
-//           ),
-//           const Positioned(
-//             bottom: 0,
-//             child: Image(
-//               image: AssetImage('images/Rectangle16.png'),
-//             ),
-//           ),
-//           child!,
-//         ],
-//       ),
