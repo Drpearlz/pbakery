@@ -15,12 +15,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: GoogleFonts.sourceSansPro().fontFamily),
+           theme: ThemeData(fontFamily: GoogleFonts.sourceSansPro().fontFamily),
       debugShowCheckedModeBanner: false,
       title: 'Pearlz Bakery',
       home: const SplashScreen(),
       // home: OnboardingScreen(),
       // home: const LoginPage(),
+
     );
+  
   }
 }

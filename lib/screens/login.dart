@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pbakery/constants/constant.dart';
+import 'package:pbakery/screens/home_page.dart';
 import '../components/background.dart';
 import '../components/roundedbutton.dart';
 import '../components/textformfield.dart';
@@ -60,9 +61,11 @@ class _LoginPageState extends State<LoginPage> {
                   onPressedIcon: revealText,
                   suffixColor: Colors.black54,
                   text: 'Password',
+
                   icon: showText == true
                       ? Icons.remove_red_eye_outlined
                       : Icons.visibility_off_outlined,
+
                   obscureText: showText,
                 ),
                 const SizedBox(height: 30),
@@ -72,8 +75,12 @@ class _LoginPageState extends State<LoginPage> {
                       style: TextStyle(
                           fontWeight: FontWeight.w800, color: Colors.black54)),
                 ),
-                const RoundedButton(
+                RoundedButton(
                   text: 'Log In',
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomePage())),
                 ),
                 const SizedBox(height: 25),
                 Row(

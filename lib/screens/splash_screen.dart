@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pbakery/constants/constants.dart';
-import 'package:pbakery/home_page.dart';
+import 'package:pbakery/screens/home_page.dart';
+import 'package:pbakery/screens/login.dart';
+import 'package:pbakery/screens/profile.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -12,11 +14,12 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
+    super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (BuildContext context) {
-          return const HomePage();
+          return const LoginPage();
         }),
       );
     });
