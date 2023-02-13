@@ -61,7 +61,11 @@ class _LoginPageState extends State<LoginPage> {
                   onPressedIcon: revealText,
                   suffixColor: Colors.black54,
                   text: 'Password',
-                  icon: showText ? Icons.visibility : Icons.visibility_off,
+
+                  icon: showText == true
+                      ? Icons.remove_red_eye_outlined
+                      : Icons.visibility_off_outlined,
+
                   obscureText: showText,
                 ),
                 const SizedBox(height: 30),

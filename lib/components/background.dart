@@ -11,23 +11,12 @@ class Background extends StatelessWidget {
     return Container(
       height: size.height,
       width: double.infinity,
-      child: Stack(
-        children: [
-          const Positioned(
-            top: 0,
-            child: Image(
-              image: AssetImage('images/Rectangle17.png'),
-            ),
-          ),
-          const Positioned(
-            bottom: 0,
-            child: Image(
-              image: AssetImage('images/Rectangle16.png'),
-            ),
-          ),
-          child!,
-        ],
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage('assets/images/login-signup-bg.png')),
       ),
+      child: child,
     );
   }
 }
